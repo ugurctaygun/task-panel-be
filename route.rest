@@ -1,6 +1,6 @@
 //REST Client VSCode extension
 
-GET http://localhost:5000/tasks
+GET  http://localhost:5000/tasks
 
 ###
 
@@ -8,8 +8,6 @@ POST http://localhost:5000/tasks
 Content-Type: application/json
 
 {
-    "id": "1234",
-    "taskId": "CASE-123" ,
     "title": "Test API",
     "description": "",
     "points": 0,
@@ -19,7 +17,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:5000/tasks/1234
+DELETE http://localhost:5000/tasks/6303c79a93a90705edfa4e33
 
 ###
 
