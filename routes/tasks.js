@@ -1,4 +1,5 @@
 const express = require("express");
+const uuid = require("uuid");
 const router = express.Router();
 const Tasks = require("../models/tasks");
 
@@ -16,6 +17,7 @@ router.get("/", async (req, res) => {
 router.post("/", async (req, res) => {
   const task = new Tasks({
     title: req.body.title,
+    taskId: "CASE-" + uuid.v4().substring(0, 4),
     description: req.body.description,
     points: req.body.points,
     status: req.body.status,
@@ -34,6 +36,16 @@ router.delete("/:id", getTask, async (req, res) => {
   try {
     await res.task.remove();
     res.json({ message: "Deleted Task" });
+  } catch (err) {
+    res.status(500).json({ message: err.message });
+  }
+});
+
+//Delete All
+router.delete("/", async (req, res) => {
+  try {
+    const tasks = await Tasks.remove();
+    res.json(tasks);
   } catch (err) {
     res.status(500).json({ message: err.message });
   }

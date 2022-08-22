@@ -27,3 +27,7 @@ Content-Type: application/json
 {
     "title": "Changed Title"
 }
+
+###
+
+DELETE http://localhost:5000/tasks
