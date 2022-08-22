@@ -12,7 +12,7 @@ Content-Type: application/json
     "description": "",
     "points": 0,
     "status": "to-do",
-    "deadline": null
+    "deadline": ""
 }
 
 ###
@@ -21,11 +21,18 @@ DELETE http://localhost:5000/tasks/6303cdbbb6ddf8b329bcee19
 
 ###
 
-PATCH  http://localhost:5000/tasks/1234
+PATCH  http://localhost:5000/tasks/6303ecc41dd7dc725cafc279
 Content-Type: application/json
 
 {
-    "title": "Changed Title"
+    "deadline": "2022-08-31T20:49:18.000Z",
+    "description": "Test description",
+    "points": 0,
+    "status": "to-do",
+    "taskId": "CASE-2a5a",
+    "title": "test",
+    "__v": 0,
+    "_id": "6303dd946d892956f96dccc5"
 }
 
 ###

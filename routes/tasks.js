@@ -65,8 +65,8 @@ router.patch("/:id", getTask, async (req, res) => {
   if (req.body.status !== null && req.body.status !== undefined) {
     res.task.status = req.body.status;
   }
-  if (req.body.date !== null && req.body.date !== undefined) {
-    res.task.date = req.body.date;
+  if (req.body.deadline !== null && req.body.deadline !== undefined) {
+    res.task.deadline = req.body.deadline;
   }
   try {
     const updatedTask = await res.task.save();
