@@ -47,7 +47,6 @@ router.patch("/:id", getTask, async (req, res) => {
     res.task.title = req.body.title;
   }
   if (req.body.description !== null && req.body.description !== undefined) {
-    console.log("still here");
     res.task.description = req.body.description;
   }
   if (req.body.points !== null && req.body.points !== undefined) {

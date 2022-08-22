@@ -2,8 +2,12 @@
   "name": "task-panel-be",
   "version": "1.0.0",
   "description": "Getir Task Panel Case Study Backend",
-  "main": "index.js",
+  "main": "server.js",
+  "engines": {
+    "node": "16.13.1"
+  },
   "scripts": {
+    "start": "node server.js",
     "devStart": "nodemon server.js"
   },
   "repository": {
